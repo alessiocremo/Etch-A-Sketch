@@ -1,0 +1,27 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+    justify-content: space-around;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.game-board {
+    width: 500px;
+    height: 500px;
+    border: 3px black solid;
+    margin-bottom: 20px;
+}
