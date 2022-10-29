@@ -1,20 +1,24 @@
 let squaresColor="black"
-let size=16
 
 document.addEventListener("DOMContentLoaded", function(){
     squaresColor="black"
-    createBoard(size);
+    createBoard(16);
 })
 
 
 setSizeButton = document.getElementById("change-size")
-setSizeButton.addEventListener("click", setNewSize())
+setSizeButton.addEventListener("click", setNewSize)
 
 
 function setNewSize(){
-    createBoard(document.getElementById("set-size").value)
+    let newSize = document.getElementById("set-size").value
+    if (newSize>=2 && newSize<=100){
+        createBoard(newSize)
+        resetBoard()
+    } 
+    else
+        alert("size should be an integer >1 and <=100")
 }
-
 
 
 function createBoard(boardSize){
@@ -36,5 +40,18 @@ function createBoard(boardSize){
 }
 
 function setColor(newColor){
-    squaresColor=newColor
+    if (newColor=="random"){
+        squaresColor=`hsl(${Math.random()*2500}, 100%,50%)`
+        console.log("ciao")
+    }
+    else{
+        squaresColor=newColor
+    }
 }
+
+
+function resetBoard (){
+    let divs=document.querySelectorAll("div")
+    divs.forEach((div)=>div.style.backgroundColor="white")
+}
+

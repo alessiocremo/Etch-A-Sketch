@@ -13,7 +13,7 @@
         <h1>Etch-A-Sketch</h1>
         <div class="header">
             <h6>Select the size</h6>
-            <input type="text" id="set-size" width="80px" height="16px" value="porcoddio">
+            <input type="text" id="set-size" width="80px" height="16px">
             <button type="button" class="btn btn-light" id="change-size" onclick="setNewSize()">Select</button>
         </div>
 
@@ -27,7 +27,7 @@
             <button type="button" id="green-button" onclick="setColor('green')" class="btn btn-success">Green</button>
             <button type="button" id="blue-button" onclick="setColor('blue')" class="btn btn-primary">Blue</button>
             <button type="button" id="random-button" onclick="setColor('random')" class="btn btn-warning">Random</button>
-            <button type="button" id="reset-button" class="btn btn-light">Reset</button>
+            <button type="button" id="reset-button" class="btn btn-light" onclick="resetBoard()">Reset</button>
         </div>
 
 
